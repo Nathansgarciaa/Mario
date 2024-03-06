@@ -1,28 +1,30 @@
 #include "World.h"
-World::World(){
+
+
+World::World() {
     levelAmount = 10;
-    levels = new Level[levelAmonut];
-
-
-}
-World::~World(){
-
-}
-World::World(int levels){
-   levelAmount = levels;
-   levels = new Level[levelAmount];
-
-
-}
-void World::nextLevel(){
-    levelCount = levelCount + 1;
-}
-void World::endGame(){
-
+    levels = new Level[levelAmount];
+    levelCount = 0; // Initialize levelCount
 }
 
-int World::getLevel(){
+World::~World() {
+    delete[] levels; // Deallocate the dynamic array
+}
+
+World::World(int levelCount) {
+    this->levelAmount = levelCount;
+    this->levels = new Level[this->levelAmount];
+    this->levelCount = 0; // Initialize levelCount
+}
+
+void World::nextLevel() {
+    levelCount++;
+}
+
+void World::endGame() {
+    // Implementation depends on what "end game" should do
+}
+
+int World::getLevel() {
     return levelCount;
 }
-
-

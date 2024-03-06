@@ -1,18 +1,22 @@
 #ifndef WORLD_H
 #define WORLD_H
-class World{
-    public:
-        World();
-        ~World();
-        World(int levels);
-        int levelAmount;
-        int levelCount;
-        Levels
-        int getLevel();
-        void nextLevel();
-        void endGame();
-        
-    
-        
+#include "Level.h"
+
+
+class World {
+public:
+    World();
+    ~World();
+    World(int levels);
+    void nextLevel();
+    void endGame();
+    int getLevel();
+
+    int levelAmount;
+    int levelCount = 0; // Initialize levelCount here or in the constructor
+
+private:
+    Level* levels; // Pointer to a dynamic array of Level objects
 };
+
 #endif
