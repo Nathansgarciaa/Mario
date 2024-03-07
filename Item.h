@@ -1,7 +1,13 @@
 #ifndef ITEM_H
 #define ITEM_H
 #include "Mario.h"
+<<<<<<< HEAD
 
+=======
+#include "Level.h"
+#include "World.h"
+using namespace std;
+>>>>>>> e14f69903a5aa3c42175d43e1cce24bc5312a7ff
 class Item {
 public:
     Item();
