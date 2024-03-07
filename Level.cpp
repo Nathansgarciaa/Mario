@@ -1,6 +1,6 @@
 #include "Level.h"
-#include <fstream>
-#include <cstdlib> 
+#include "Coin.h"
+
 Level::Level(){
     N = 1;
     row = 0;

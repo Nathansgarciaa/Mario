@@ -1,14 +1,6 @@
-//create grid, fill grid with items, enemies, 
-
-
-//funcs
-//getValue of position
-//setValue of position
-
 #ifndef LEVEL_H
 #include <fstream>
 #include <iostream>
-#include "Coin.h"
 using namespace std;
 
 class Level{
