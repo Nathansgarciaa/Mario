@@ -8,7 +8,7 @@ class Mushroom : public Item {
 public:
     Mushroom();
     Mushroom(int posX, int posY);
-    virtual void Interact(Mario& mario) override;
+    virtual void Interact(Mario& mario);
 };
 
 #endif // MUSHROOM_H

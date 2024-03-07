@@ -13,7 +13,7 @@ public:
     int getLevel();
 
     int levelAmount;
-    int levelCount = 0; // Initialize levelCount here or in the constructor
+    int levelCount; // Initialize levelCount here or in the constructor
 
 private:
     Level* levels; // Pointer to a dynamic array of Level objects

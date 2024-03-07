@@ -9,7 +9,7 @@ class Warp : public Item {
 public:
     Warp();
     Warp(int posX, int posY);
-    virtual void Interact(Mario& mario) override; // Added World& parameter
+    virtual void Interact(Mario& mario); // Added World& parameter
 };
 
 #endif
