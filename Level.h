@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-=======
-//create grid, fill grid with items, enemies, 
-
-
-//funcs
-//getValue of position
-//setValue of position
-
->>>>>>> e14f69903a5aa3c42175d43e1cce24bc5312a7ff
 #ifndef LEVEL_H
 #include <fstream>
 #include <iostream>

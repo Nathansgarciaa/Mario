@@ -1,11 +1,6 @@
 #include "Level.h"
-<<<<<<< HEAD
 #include "Coin.h"
 
-=======
-#include <fstream>
-#include <cstdlib> 
->>>>>>> e14f69903a5aa3c42175d43e1cce24bc5312a7ff
 Level::Level(){
     N = 1;
     row = 0;
@@ -42,11 +37,7 @@ void Level::fillGrid(){
             for(int j = 0; j < N; j++){
                 int randy = rand() % 4;
             if(randy == 0){
-<<<<<<< HEAD
                 grid[i*N+j] = coin.getValue();
-=======
-                grid[i*N+j] = 'c';
->>>>>>> e14f69903a5aa3c42175d43e1cce24bc5312a7ff
             } else if(randy == 1){
                 grid[i*N+j] = 'm';
             } else if(randy == 2){
