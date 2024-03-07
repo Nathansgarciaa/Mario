@@ -38,6 +38,7 @@ void Goomba::Interact(Mario& mario) {
             }
         }
     }
-}
+
     // Note: The concept of Mario moving on, and what happens specifically when the game is lost,
-    // is not covered here and should be handled by the game logic outside
+    // is not covered here and should be handled by the game logic outside this function.
+}
