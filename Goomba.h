@@ -1,5 +1,15 @@
-//bool result
-//true if win, false if lost
+#ifndef GOOMBA_H
+#define GOOMBA_H
 
-//func
-//bool interacts()
+#include <ctime>
+#include <random>
+
+class Goomba{
+    public: 
+        Goomba();
+        ~Goomba();
+        bool interaction();
+        char getValue(){return 'g';};
+};
+
+#endif

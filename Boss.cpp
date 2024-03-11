@@ -1,15 +1,15 @@
-#include "Goomba.h"
+#include "Boss.h"
 
-Goomba::Goomba(){
+Boss::Boss(){
     srand((unsigned)time(0));
 }
-Goomba::~Goomba(){
+Boss::~Boss(){
 
 }
 
-bool Goomba::interaction(){
+bool Boss::interaction(){
     //win
-    if((rand() % 100) >= 20){
+    if((rand() % 100) >= 50){
         return true;
     }
     //lose

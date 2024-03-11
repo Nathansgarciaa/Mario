@@ -7,14 +7,6 @@ Warp::Warp() {
 }
 
 // Parameterized constructor
-Warp::Warp(int posX, int posY) {
-    this->posX = posX;
-    this->posY = posY;
-    interacted = false;
-}
+Warp::~Warp(){
 
-
-void Warp::Interact(Mario& mario) {
-
-    //will generate marios random x and y in nb by n grid in level
 }
