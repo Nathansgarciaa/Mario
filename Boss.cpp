@@ -1,22 +1,4 @@
 #include "Boss.h"
-<<<<<<< HEAD
-
-Boss::Boss(){
-    srand((unsigned)time(0));
-}
-Boss::~Boss(){
-
-}
-
-bool Boss::interaction(){
-    //win
-    if((rand() % 100) >= 50){
-        return true;
-    }
-    //lose
-    else{
-        return false;
-=======
 #include <cstdlib> // Include for access to rand() and srand()
 #include <ctime>   // Include for access to time() for seeding srand()
 
@@ -65,6 +47,5 @@ void Boss::Encounter(Mario& mario, int currentLevel, int totalLevels) {
             }
         }
         // Logic to retry the fight with the boss could be added here
->>>>>>> fcad4ea2971320e511db594d15b710186151257a
     }
 }

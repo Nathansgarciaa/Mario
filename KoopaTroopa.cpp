@@ -1,24 +1,4 @@
 #include "KoopaTroopa.h"
-<<<<<<< HEAD
-
-KoopaTroopa::KoopaTroopa(){
-    srand((unsigned)time(0));
-}
-KoopaTroopa::~KoopaTroopa(){
-}
-
-bool KoopaTroopa::interaction(){
-
-    //win
-    if((rand() % 100) >= 35){
-        return true;
-    }
-    //lose
-    else{
-        return false;
-    }
-}
-=======
 #include <cstdlib> // Include for access to rand() and srand()
 #include <ctime>   // Include for access to time() for seeding srand()
 
@@ -62,4 +42,3 @@ void KoopaTroopa::Interact(Mario& mario) {
     // Note: The concept of Mario moving on, and what happens specifically when the game is lost,
     // is not covered here and should be handled by the game logic outside this function.
 }
->>>>>>> fcad4ea2971320e511db594d15b710186151257a

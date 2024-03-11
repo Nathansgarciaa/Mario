@@ -1,12 +1,7 @@
 #include "Level.h"
 #include "Coin.h"
-#include "Mushroom.h"
-#include "Warp.h"
-#include "Goomba.h"
-#include "KoopaTroopa.h"
 
 Level::Level(){
-    L = 1;
     N = 1;
     row = 0;
     col = 0;
@@ -20,23 +15,11 @@ Level::Level(int sizeOfGrid){
 }
 Level::~Level(){
     delete[] grid;
-}
+};
 
 Coin coin;
-Mushroom mushroom;
-Warp warp;
-Goomba goomba;
-KoopaTroopa koop;
 
-int Level::getLevel(){
-    return L;
-}
-
-void Level::setLevel(int level){
-    L = level;
-}
 void Level::printGrid() { // prints out the current level
-    cout << endl;
     cout << ("=========\n");
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -44,7 +27,7 @@ void Level::printGrid() { // prints out the current level
         }
         cout << ("\n");
     }
-    cout << ("=========\n") << endl;
+    cout << ("=========\n");
 }
 
 //fills grid with only enemies, items, or nothing
@@ -52,18 +35,20 @@ void Level::fillGrid(){
     srand(static_cast<unsigned int>(time(0))); // https://www.geeksforgeeks.org/rand-and-srand-in-ccpp/
         for(int i = 0; i < N; i++){
             for(int j = 0; j < N; j++){
-                int randy = rand() % 5;
-                if(randy == 0){
-                    grid[i*N+j] = coin.getValue();
-                } else if(randy == 1){
-                    grid[i*N+j] = mushroom.getValue();
-                } else if(randy == 2){
-                    grid[i*N+j] = koop.getValue();
-                } else if(randy == 3){
-                    grid[i*N+j] = goomba.getValue();
-                } else if(randy == 4){
-                    grid[i*N+j] = 'x';
+                int randy = rand() % 4;
+            if(randy == 0){
+                grid[i*N+j] = coin.getValue();
+            } else if(randy == 1){
+                grid[i*N+j] = 'm';
+            } else if(randy == 2){
+                if((rand()%1) == 1){
+                    grid[i*N+j] = 'k';
+                }else{
+                    grid[i*N+j] = 'g';
                 }
+            } else if(randy == 3){
+                grid[i*N+j] = 'x';
+            }
         }
     }
     placeBoss();
@@ -82,9 +67,9 @@ void Level::placeWarp(){
     //need to check if Level is final level
     int chance = rand() % (N*N);
     if(grid[chance] != 'b'){
-        grid[chance] = warp.getValue();
+        grid[chance] = 'w';
     } else{
-        grid[chance - 1] = warp.getValue();
+        grid[chance - 1] = 'w';
     }
 }
 
@@ -100,11 +85,9 @@ void Level::setPos(int i, int j, char value){
 
 void Level::placeMario(){
     int chance = rand() % (N*N);
-    char temp = grid[chance];
     if(grid[chance] != 'w'){
         grid[chance] = 'H';
     } else{
-        temp = grid[chance -1];
         grid[chance - 1] = 'H';
     }
 }

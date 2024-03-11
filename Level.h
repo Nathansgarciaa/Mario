@@ -1,5 +1,4 @@
 #ifndef LEVEL_H
-#define LEVEL_H
 #include <fstream>
 #include <iostream>
 using namespace std;
@@ -9,10 +8,6 @@ class Level{
         Level();
         Level(int sizeOfGrid);
         ~Level();
-        int L;
-        int getLevel();
-        void setLevel(int level);
-        int getSize(){return N;};
         void printGrid();
         void fillGrid();
         void placeBoss();
@@ -25,6 +20,7 @@ class Level{
 
     private: 
         int N; //size of grid
+        int M; // size of grid
         int row;
         int col;
         char *grid; //2D grid
