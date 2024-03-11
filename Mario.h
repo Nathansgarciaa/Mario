@@ -98,6 +98,7 @@ class Mario{
         void warpInteraction();
         void interaction();
     private:
+<<<<<<< HEAD
         Level &test;
         Coin &coinT;
         Mushroom &mush;
@@ -105,6 +106,15 @@ class Mario{
         KoopaTroopa &koop;
         Boss &bos;
         Warp &warpT;
+=======
+        // move functions should update x and y
+        void moveLeft();
+        void moveRight();
+        void moveUp();
+        void moveDown();
+        
+        
+>>>>>>> fcad4ea2971320e511db594d15b710186151257a
 
 
 
