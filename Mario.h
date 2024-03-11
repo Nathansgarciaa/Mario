@@ -16,7 +16,7 @@ class Mario{
         void moveRight();
         void moveUp();
         void moveDown();
-        void interaction(char d);//char d is the represenation of the other objects in the grid
+        
         
 
 
