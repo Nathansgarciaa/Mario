@@ -1,20 +1,27 @@
 #include "Coin.h"
+#include "Mario.h"
+#include "World.h"
+#include <cstdlib>
+#include <ostream>
+
+/*
+    Description: This class modifies Mario's variables based on it's interaction with a coin.
+*/
 
 // Default constructor
 Coin::Coin() {
-    posX = 0; // Default position X
-    posY = 0; // Default position Y
-    interacted = false; // Item has not been interacted with
 }
 
 // Parameterized constructor
-Coin::Coin(int posX, int posY) {
-    this->posX = posX; // Set position X to the argument posX
-    this->posY = posY; // Set position Y to the argument posY
-    interacted = false; // Item has not been interacted with
+Coin::~Coin() {
 }
 
-// Interact method increases Mario's coinCount
-void Coin::Interact(Mario& mario) {
-    mario.coinCount += 1; // Increment Mario's coin count by 1
+// Coin interaction
+void Coin::interaction(std::ostream &outputStream, Mario &mario, World &world) {
+    outputStream << "Mario collected a coin. ";
+    mario.setNumOfCoins(mario.getNumOfCoins() + 1); // Increment Mario's coin count by 1
+    if(mario.getNumOfCoins() == 20){ // if mario has 20 coins
+        mario.setNumOfLives(mario.getNumOfLives() + 1); //gain extra life
+        mario.setNumOfCoins(0); //reset coin to 0
+    }
 }

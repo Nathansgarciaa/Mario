@@ -1,22 +1,26 @@
 #ifndef WORLD_H
 #define WORLD_H
-#include "Level.h"
-
+#include <iostream>
+#include <random>
+using namespace std;
+class ostream;
 
 class World {
 public:
     World();
+    World(int numberOfLevels, int gridSize, int percentCoins, int percentNothing, int percentGoombas, int percentKoopas, int percentMushrooms);
     ~World();
-    World(int levels);
-    void nextLevel();
-    void endGame();
-    int getLevel();
-
-    int levelAmount;
-    int levelCount; // Initialize levelCount here or in the constructor
+    int getNumOfLevels();
+    int calculatePos(int level, int row, int col);
+    void setPos(int level, int row, int col, char c);
+    char getPos(int level, int row, int col);
+    void printLevel(std::ostream &outputStream, int level);
+    int getGridSize();
 
 private:
-    Level* levels; // Pointer to a dynamic array of Level objects
-};
+    int L;
+    int N;
+    char *grid;
 
+};
 #endif

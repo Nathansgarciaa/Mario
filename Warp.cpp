@@ -1,20 +1,21 @@
 #include "Warp.h"
-#include <random> // For random number generation
+#include "Mario.h"
+#include "World.h"
+#include <cstdlib>
+#include <ostream>
+#include <random> 
 
-// Default constructor
-Warp::Warp() {
-    // Initialize posX and posY if needed
-}
+/*
+    Description: This class modifies Mario's variables based on it's interaction with a warp pipe.
+*/
 
-// Parameterized constructor
-Warp::Warp(int posX, int posY) {
-    this->posX = posX;
-    this->posY = posY;
-    interacted = false;
-}
+Warp::Warp() {}
+Warp::~Warp() {}
 
-
-void Warp::Interact(Mario& mario) {
-
-    //will generate marios random x and y in nb by n grid in level
+//Warp interaction
+void Warp::interaction(std::ostream &outputStream, Mario &mario, World &world) {
+    outputStream << "Mario warped. ";
+    mario.setCurrentLevel(mario.getCurrentLevel() + 1); // increments current level
+    mario.placeMario(world); //places mario in next level
+    mario.setStay(true); // stay put
 }

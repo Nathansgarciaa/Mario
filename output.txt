@@ -1,0 +1,292 @@
+==========
+c g c c k 
+w c x m m 
+m g c k k 
+g m k H x 
+g k c g b 
+==========
+Mario's Location : (3, 3). Mario fought a Goomba and won. Power Level 0. Mario has 3 lives. Mario has 0 coins. Mario is on level 0
+Next move: up
+
+
+==========
+c g c c k 
+w c x m m 
+m g c H k 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 3). Mario fought a Goomba and won. Power Level 0. Mario has 3 lives. Mario has 0 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g c c k 
+w c x m m 
+m g c x H 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 4). Mario fought a Koopa and lost
+Power Level 0. Mario has 2 lives. Mario has 0 coins. Mario is on level 0
+Next move: stay put
+
+
+==========
+c g c c k 
+w c x m m 
+m g c x H 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 4). Mario fought a Goomba and won. Power Level 0. Mario has 2 lives. Mario has 0 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g c c k 
+w c x m m 
+H g c x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 0). Mario ate a mushroom. Power Level 1. Mario has 2 lives. Mario has 0 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g c c k 
+w c x m m 
+x H c x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 1). Mario fought a Goomba and won. Power Level 1. Mario has 2 lives. Mario has 0 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g c c k 
+w c x m m 
+x x H x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 2). Mario collected a coin. Power Level 1. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g c c k 
+w c x m m 
+x H x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 1). The position is empty. Power Level 1. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g c c k 
+w c x m m 
+x x H x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 2). The position is empty. Power Level 1. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g c c k 
+w c x m m 
+x x x H x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 3). The position is empty. Power Level 1. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g c c k 
+w c x m m 
+x x H x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 2). The position is empty. Power Level 1. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g c c k 
+w c x m m 
+x H x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 1). The position is empty. Power Level 1. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g c c k 
+w c x m m 
+H x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 0). The position is empty. Power Level 1. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g c c k 
+w c x m m 
+x x x x H 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (2, 4). The position is empty. Power Level 1. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: up
+
+
+==========
+c g c c k 
+w c x m H 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (1, 4). Mario ate a mushroom. Power Level 2. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g c c k 
+w c x H x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (1, 3). Mario ate a mushroom. Power Level 2. Mario has 2 lives. Mario has 1 coins. Mario is on level 0
+Next move: up
+
+
+==========
+c g c H k 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (0, 3). Mario collected a coin. Power Level 2. Mario has 2 lives. Mario has 2 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g H x k 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (0, 2). Mario collected a coin. Power Level 2. Mario has 2 lives. Mario has 3 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g x H k 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (0, 3). The position is empty. Power Level 2. Mario has 2 lives. Mario has 3 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g x x H 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (0, 4). Mario fought a Koopa and lost
+Power Level 1. Mario has 2 lives. Mario has 3 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g x H x 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (0, 3). The position is empty. Power Level 1. Mario has 2 lives. Mario has 3 coins. Mario is on level 0
+Next move: left
+
+
+==========
+c g H x x 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (0, 2). The position is empty. Power Level 1. Mario has 2 lives. Mario has 3 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g x H x 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (0, 3). The position is empty. Power Level 1. Mario has 2 lives. Mario has 3 coins. Mario is on level 0
+Next move: right
+
+
+==========
+c g x x H 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g b 
+==========
+Mario's Location : (0, 4). The position is empty. Power Level 1. Mario has 2 lives. Mario has 3 coins. Mario is on level 0
+Next move: up
+
+
+==========
+c g x x x 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g H 
+==========
+Mario's Location : (4, 4). Mario fought the level boss and lost
+Power Level 0. Mario has 1 lives. Mario has 3 coins. Mario is on level 0
+Next move: stay put
+
+
+==========
+c g x x x 
+w c x x x 
+x x x x x 
+g m k x x 
+g k c g H 
+==========
+Mario's Location : (4, 4). Mario fought the level boss and lost
+Power Level 0. Mario has 0 lives. Mario has 3 coins. Mario is on level 0
+Next move: stay put
+
+
+Mario ran out of lives. YOU LOST.
+Total moves: 26

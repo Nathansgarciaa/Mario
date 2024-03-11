@@ -1,15 +1,18 @@
 #ifndef WARP_H
 #define WARP_H
+#include <iostream>
+using namespace std;
 
-#include "Item.h"
-#include "Mario.h"
-#include "World.h" // This should contain the declaration of World and its levelCount
+class Mario;
+class World;
+class ostream;
 
-class Warp : public Item {
+class Warp{
 public:
     Warp();
-    Warp(int posX, int posY);
-    virtual void Interact(Mario& mario); // Added World& parameter
+    ~Warp();
+    void interaction(std::ostream &outputStream, Mario  &mario, World &world);
+
 };
 
 #endif

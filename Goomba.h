@@ -1,14 +1,17 @@
 #ifndef GOOMBA_H
 #define GOOMBA_H
+#include <iostream>
+using namespace std;
 
-#include "Enemy.h"
-#include "Mario.h" // Assuming the Mario class is defined elsewhere
+class Mario;// Assuming the Mario class is defined elsewhere
+class World;
+class ostream;
 
-class Goomba : public Enemy {
+class Goomba{
 public:
     Goomba();
-    Goomba(int posX, int posY);
-    virtual void Interact(Mario& mario) override;
+    ~Goomba();
+    void interaction(std::ostream &outputStream, Mario &mario, World &world);
 };
 
 #endif

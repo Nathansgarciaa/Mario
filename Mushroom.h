@@ -1,14 +1,17 @@
 #ifndef MUSHROOM_H
 #define MUSHROOM_H
+#include <iostream>
+using namespace std;
 
-#include "Item.h"
-#include "Mario.h" // We assume that Mario.h has the declaration for the Mario class
+class Mario;
+class World;
+class ostream;
 
-class Mushroom : public Item {
+class Mushroom{
 public:
     Mushroom();
-    Mushroom(int posX, int posY);
-    virtual void Interact(Mario& mario);
+    ~Mushroom();
+    void interaction(std::ostream &outputStream, Mario &mario, World &world);
 };
 
-#endif // MUSHROOM_H
+#endif 

@@ -1,12 +1,20 @@
-#include "Level.h"
-int main(int argc, char **argv){
-    Level test(5);
-    int j = 0;
-    int i = 0;
+#include <iostream>
+#include <fstream>
+#include "Game.h"
+#include "Mario.h"
+#include "World.h"
 
-    test.fillGrid();
-    test.printGrid();
-    test.getCoord('H', i, j);
+using namespace std;
+/*
+    Description: This file is used to compile all other .cpp files and also get input from the 
+    command line of the inputFile and outputFile name.
+*/
 
-    cout << "Mario[" << i << "][" << j << "]" << endl;
+int main(int argc, char* argv[]) {
+    string inputFile = argv[1];
+    string outputFile = argv[2];
+
+    Game game(inputFile, outputFile);
+    
+    return 0;
 }

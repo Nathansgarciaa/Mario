@@ -1,16 +1,16 @@
 #ifndef COIN_H
 #define COIN_H
+#include <iostream>
 
-#include "Item.h"
+class Mario;
+class World;
+class ostream;
 
- 
-
-class Coin : public Item {
+class Coin{
 public:
     Coin();
-    Coin(int posX, int posY);
-    char getValue(){return 'c';};
-    virtual void Interact(Mario& mario); // Override Item's pure virtual function
+    ~Coin();
+    void interaction(std::ostream &outputStream, Mario &mario, World &world); 
 };
 
 #endif

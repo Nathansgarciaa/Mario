@@ -1,44 +1,38 @@
 #include "Goomba.h"
-#include <cstdlib> // For rand() and srand()
-#include <ctime>   // For time()
+#include "Mario.h"
+#include "World.h"
+#include <ostream>
+#include <cstdlib> 
+#include <ctime> 
 
-Goomba::Goomba() {
-    // Inherits posX, posY, and isDefeated initialization from Enemy
+/*
+    Description: This class modifies Mario's variables based on it's interaction with a goomba.
+*/
+
+Goomba::Goomba(){
+    srand(static_cast<unsigned int>(time(0)));
 }
 
-Goomba::Goomba(int posX, int posY) {
-    this->posX = posX;
-    this->posY = posY;
-    this->isDefeated = false;
+Goomba::~Goomba() {
 }
 
-void Goomba::Interact(Mario& mario) {
-    // Seed the random number generator only once
-    static bool isSeeded = false;
-    if (!isSeeded) {
-        srand(static_cast<unsigned int>(time(0))); // Use current time as seed for random generator
-        isSeeded = true;
-    }
+//Goomba interaction
+void Goomba::interaction(std::ostream &outputStream, Mario &mario, World &world) {
+    int chance = rand() % 100; // Generate a random number between 0 and 99
 
-    int randomValue = rand() % 100; // Generate a random number between 0 and 99
-
-    if (randomValue < 80) { // 80% chance for Mario to defeat the Goomba
-        this->isDefeated = true;
-        Enemy::enemiesDefeated += 1;
+    if (chance < 80) { // 80% chance for Mario to defeat the Goomba
+        outputStream << "Mario fought a Goomba and won. ";
     } else { // 20% chance for Mario to lose
-        if (mario.pl > 0) {
-            mario.pl -= 1;
+        if (mario.getPowerLevel() > 0) {
+            mario.setPowerLevel(mario.getPowerLevel()-1);
+            outputStream << "Mario fought a Goomba and lost\n";
         } else {
-            mario.v -= 1;
-            if (mario.v > 0) {
-                mario.pl = 0;
-            } else {
-                // Handle game over scenario, possibly with a flag or a function call
-                // Game ends - not represented here, but this is where you'd trigger it
+            outputStream << "Mario fought a Goomba and lost\n";
+            mario.setNumOfLives(mario.getNumOfLives() - 1);
+            if (mario.getNumOfLives() > 0) {
+                mario.setStay(true);
+                mario.setPowerLevel(0);
             }
         }
     }
-
-    // Note: The concept of Mario moving on, and what happens specifically when the game is lost,
-    // is not covered here and should be handled by the game logic outside this function.
 }

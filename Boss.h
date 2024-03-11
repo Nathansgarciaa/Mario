@@ -1,17 +1,16 @@
 #ifndef BOSS_H
 #define BOSS_H
+#include <iostream>
 
-#include "Mario.h" // Assuming the Mario class is defined elsewhere
+class Mario;
+class World;
+class ostream;
 
 class Boss {
 public:
-    int posX; // X position of the Boss
-    int posY; // Y position of the Boss
-    bool isDefeated; // Status of the Boss
-
     Boss();
-    Boss(int posX, int posY);
-    void Encounter(Mario& mario, int levelCount, int levelAmount);
+    ~Boss();
+    void interaction(std::ostream &outputStream, Mario& mario, World &world);
 };
 
 #endif

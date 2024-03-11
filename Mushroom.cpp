@@ -1,23 +1,26 @@
 #include "Mushroom.h"
+#include "Mario.h"
+#include "World.h"
+#include <cstdlib>
+#include <ostream>
+
+/*
+    Description: This class modifies Mario's variables based on it's interaction with a mushroom.
+*/
 
 // Default constructor
 Mushroom::Mushroom() {
-    posX = 0;
-    posY = 0;
-    interacted = false;
 }
 
 // Parameterized constructor
-Mushroom::Mushroom(int posX, int posY) {
-    this->posX = posX;
-    this->posY = posY;
-    interacted = false;
+Mushroom::~Mushroom(){
 }
 
 // Interact method modifies Mario's pl variable
-void Mushroom::Interact(Mario& mario) {
-    if (mario.pl < 2) { // If Mario's power level is less than 2
-        mario.pl += 1; // Increment the power level by 1
+void Mushroom::interaction(std::ostream &outputStream, Mario &mario, World &world) {
+    outputStream << "Mario ate a mushroom. ";
+    mario.setPowerLevel(mario.getPowerLevel() + 1);
+    if(mario.getPowerLevel() > 2){
+        mario.setPowerLevel(2);
     }
-    // If Mario's power level is 2, do nothing (it remains 2)
 }

@@ -1,14 +1,17 @@
 #ifndef KOOPATROOPA_H
 #define KOOPATROOPA_H
+#include <iostream>
+using namespace std;
 
-#include "Enemy.h"
-#include "Mario.h" // Assuming Mario class is defined elsewhere
+class Mario;
+class World;
+class ostream;
 
-class KoopaTroopa : public Enemy {
+class KoopaTroopa{
 public:
     KoopaTroopa();
-    KoopaTroopa(int posX, int posY);
-    virtual void Interact(Mario& mario) override;
+    ~KoopaTroopa();
+    void interaction(std::ostream &outputStream, Mario &mario, World &world);
 };
 
 #endif

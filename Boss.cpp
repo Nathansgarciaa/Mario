@@ -1,51 +1,44 @@
 #include "Boss.h"
-#include <cstdlib> // Include for access to rand() and srand()
-#include <ctime>   // Include for access to time() for seeding srand()
+#include "Mario.h"
+#include "World.h"
+#include <ostream>
+#include <cstdlib> 
+#include <ctime>   
 
+/*
+    Description: This class modifies Mario's variables based on it's interaction with a boss.
+*/
+
+//Constructor
 Boss::Boss() {
-    posX = 0; // Initialize X position of the Boss to 0
-    posY = 0; // Initialize Y position of the Boss to 0
-    isDefeated = false; // Boss is not defeated initially
+    srand((unsigned)time(NULL));
+}
+//Destructor
+Boss::~Boss() {
 }
 
-Boss::Boss(int posX, int posY) {
-    this->posX = posX; // Set X position to the given argument
-    this->posY = posY; // Set Y position to the given argument
-    isDefeated = false; // Boss is not defeated initially
-}
+//Boss interaction function
+void Boss::interaction(std::ostream &outputStream, Mario& mario, World &world) {
 
-void Boss::Encounter(Mario& mario, int currentLevel, int totalLevels) {
-    // Seed the random number generator only once
-    static bool seeded = false; // Static variable to ensure srand is called only once
-    if (!seeded) {
-        srand((unsigned)time(NULL)); // Use current time as seed for random generator
-        seeded = true;
-    }
+    int chance = rand() % 100; // Generate a random number between 0 and 99
 
-    int fightOutcome = rand() % 100; // Generate a random number between 0 and 99
-
-    if (fightOutcome < 50) { // 50% chance for Mario to win
-        isDefeated = true; // Mark the Boss as defeated
-        if (currentLevel == totalLevels) {
-            // Mario saves the princess and wins the game
-            // Implement game win logic here
-        } else {
-            // Mario moves on to the next level
-            // Implement level progression logic here
-        }
+    if (chance < 50) { // 50% chance for Mario to win
+        outputStream << "Mario fought the level boss and won\n";
+        mario.setCurrentLevel(mario.getCurrentLevel() + 1); //increase level by 1
+        mario.placeMario(world); //place mario in level L
+        mario.setStay(true); //stay put
     } else { // 50% chance for Mario to lose
-        if (mario.pl > 1) {
-            mario.pl -= 2; // Decrease Mario's power level by 2
+        if (mario.getPowerLevel() > 1) {
+            mario.setPowerLevel(mario.getPowerLevel() - 2); // Decrease Mario's power level by 2
+            outputStream << "Mario fought the level boss and lost\n";
         } else {
-            mario.v -= 1; // Mario loses a life
-            if (mario.v > 0) {
-                mario.pl = 0; // Reset Mario's power level to 0
-                // Mario continues at the same location
-            } else {
-                // Mario has no more lives - game over
-                // Implement game over logic here
+            outputStream << "Mario fought the level boss and lost\n";
+            mario.setNumOfLives(mario.getNumOfLives() - 1); // Mario loses a life
+            if (mario.getNumOfLives() > 0) {
+                mario.setPowerLevel(0); // Reset Mario's power level to 0
+                mario.setStay(true); //stay put
             }
         }
-        // Logic to retry the fight with the boss could be added here
+        mario.setStay(true); //stay put
     }
 }
